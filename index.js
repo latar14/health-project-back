@@ -10,6 +10,7 @@ app.use(express.static(path.join(__dirname, "image")))
 
 app.use(cors());
 app.use(express.json());
+app.use(require('./routes/product.route'))
 app.use(require('./routes/diet.route'))
 
 mongoose
