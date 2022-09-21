@@ -3,9 +3,10 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
 const cors = require("cors");
 const path = require("path");
+
+app.use(express.static(path.join(__dirname, "image")))
 
 app.use(cors());
 app.use(express.json());
